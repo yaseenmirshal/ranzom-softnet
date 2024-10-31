@@ -3,6 +3,7 @@ import localFont from "next/font/local"; // Import localFont
 import { Sora } from 'next/font/google'; // Import the Sora font
 import "./globals.css"; // Import your global CSS
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 // Load local fonts
 const geistSans = localFont({
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );
