@@ -14,12 +14,11 @@ export default function Footer() {
         <div className="space-y-3">
           <h1 className="text-lg font-semibold">Ranzom Softnet</h1>
           <p className="text-gray-400 text-sm">
-            We're passionate about delivering the most effective marketing and technology solutions. We take the time
+            Were passionate about delivering the most effective marketing and technology solutions. We take the time
             to understand your unique needs and goals, then leverage our expertise to craft a customized plan that drives
             results.
           </p>
         </div>
-
         {/* Products Section */}
         <div className='ml-14'>
           <h2 className="text-base font-semibold">PRODUCTS</h2>
@@ -55,7 +54,7 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className="border-t border-gray-700 py-3">
         <div className="container mx-auto flex flex-col items-center md:flex-row justify-between text-center text-gray-400 text-xs">
-          <p>&copy; 2024 yminnovation. All rights reserved.</p>
+          <p>&copy; 2023 yminnovation. All rights reserved.</p>
           {/* Social Icons */}
           <div className="flex text-xl space-x-6 mt-3 md:mt-0">
             <FaFacebook className="hover:text-white cursor-pointer" />
