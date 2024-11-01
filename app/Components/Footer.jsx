@@ -5,14 +5,12 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-8">
       {/* Social Connect Bar */}
-      <div className="bg-purple-500 text-center py-2 text-sm">
-        <p>Get connected with us on social networks:</p>
-      </div>
+  
 
       <div className="container mx-auto px-4 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-6">
         {/* Logo and Description */}
         <div className="space-y-3">
-          <h1 className="text-lg font-semibold">Ranzom Softnet</h1>
+          <h1 className="text-2xl font-semibold">Ranzom Softnet</h1>
           <p className="text-gray-400 text-sm">
             Were passionate about delivering the most effective marketing and technology solutions. We take the time
             to understand your unique needs and goals, then leverage our expertise to craft a customized plan that drives

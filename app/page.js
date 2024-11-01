@@ -1,11 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaInstagram, FaWhatsapp, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import About from './Components/About';
+import Service from './Components/Service';
 
 export default function Home() {
   return (
     <>
-      <div className="bg-[#0a012a] min-h-screen mt-14 md:mt-0 flex flex-col justify-center items-center text-white relative overflow-hidden px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#0a012a] min-h-screen mt-14 md:mt-0 flex flex-col justify-center items-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 flex justify-center items-center text-[80px] sm:text-[150px] lg:text-[200px] font-extrabold text-[#0a012a] opacity-10">
           RANZOM SOFTNET
         </div>
@@ -101,6 +103,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <About/>
+      <Service/>
     </>
   );
 }
