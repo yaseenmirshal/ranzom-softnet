@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { FaInstagram, FaWhatsapp, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import About from './Components/About';
 import Service from './Components/Service';
+import Contact from './Components/Contact';
+import Works from './Components/Works';
 
 export default function Home() {
   return (
@@ -105,6 +107,9 @@ export default function Home() {
       </div>
       <About/>
       <Service/>
+      <Works/>
+      <Contact/>
+     
     </>
   );
 }

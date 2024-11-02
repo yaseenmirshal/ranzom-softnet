@@ -1,5 +1,6 @@
 // components/Footer.js
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -10,7 +11,10 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-6">
         {/* Logo and Description */}
         <div className="space-y-3">
-          <h1 className="text-2xl font-semibold">Ranzom Softnet</h1>
+        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="./images/rslogo.png" className="h-10 mr-[-10px]" alt="Flowbite Logo"/>
+      <span className="self-center text-2xl md:text-1xl  font-semibold whitespace-nowrap dark:text-white">Ranzom Softnet</span>
+  </Link>
           <p className="text-gray-400 text-sm">
             Were passionate about delivering the most effective marketing and technology solutions. We take the time
             to understand your unique needs and goals, then leverage our expertise to craft a customized plan that drives
