@@ -42,7 +42,7 @@ const About = () => {
           data-aos="fade-right" // Illustration will slide in from the left
         >
           <img
-            src="https://static.vecteezy.com/system/resources/previews/010/873/246/large_2x/3d-business-man-presenting-business-growth-illustration-png.png"
+            src="./images/illusabout.png"
             alt="About Ranzom Softnet Illustration"
             width={500}
             height={500}

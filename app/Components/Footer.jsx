@@ -63,7 +63,7 @@ export default function Footer() {
             <FaTwitter className="hover:text-white cursor-pointer" />
             <FaInstagram className="hover:text-white cursor-pointer" />
             <FaLinkedin className="hover:text-white cursor-pointer" />
-            <FaGithub className="hover:text-white cursor-pointer" />
+            
           </div>
         </div>
       </div>

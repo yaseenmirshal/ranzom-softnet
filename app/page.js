@@ -87,13 +87,13 @@ export default function Home() {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 flex flex-wrap justify-around w-full text-center space-y-8 sm:space-y-0">
+        <div className="mt-16 mb-16 flex flex-wrap justify-around w-full text-center space-y-8 sm:space-y-0">
           <div className="w-1/2 sm:w-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold">50+</h2>
             <p className="text-gray-400 text-sm sm:text-lg">Projects Completed</p>
           </div>
-          <div className="w-1/2 sm:w-auto text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold">4</h2>
+          <div className="w-1/2 sm:w-auto text-center ">
+            <h2 className="text-4xl sm:text-5xl font-bold mt-[-35px] md:mt-0">4</h2>
             <p className="text-gray-400 text-sm sm:text-lg">Years of Experience</p>
           </div>
           <div className="w-1/2 sm:w-auto text-center">
