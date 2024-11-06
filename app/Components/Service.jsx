@@ -42,7 +42,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 mt-[-70px] md:mt-0">
+    <section id='services' className="bg-white py-16 px-6 md:px-12 lg:px-24 mt-[-70px] md:mt-0">
     <div className="container mx-auto text-center">
       <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Services</h2>
       <p className="text-gray-600 mb-12">

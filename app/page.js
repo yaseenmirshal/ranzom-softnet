@@ -4,7 +4,6 @@ import { FaInstagram, FaWhatsapp, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import About from './Components/About';
 import Service from './Components/Service';
 import Contact from './Components/Contact';
-import Works from './Components/Works';
 import Stacks from './Components/Stacks';
 
 export default function Home() {
@@ -87,7 +86,7 @@ export default function Home() {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 mb-16 flex flex-wrap justify-around w-full text-center space-y-8 sm:space-y-0">
+        <div className="mt-16 mb-16 md:mb-0 flex flex-wrap justify-around w-full text-center space-y-8 sm:space-y-0">
           <div className="w-1/2 sm:w-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold">50+</h2>
             <p className="text-gray-400 text-sm sm:text-lg">Projects Completed</p>

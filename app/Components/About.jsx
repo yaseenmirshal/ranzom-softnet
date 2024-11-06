@@ -9,7 +9,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
+    <section id='about' className="bg-white py-16 px-6 md:px-12 lg:px-24">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between">
         
         {/* Text Section */}
