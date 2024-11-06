@@ -22,7 +22,7 @@ export default function Footer() {
           </p>
         </div>
         {/* Products Section */}
-        <div className='ml-14'>
+        <div className='ml-0 md:ml-14'>
           <h2 className="text-base font-semibold">PRODUCTS</h2>
           <ul className="mt-3 space-y-1 text-gray-400 text-sm">
             <li>Web Development</li>

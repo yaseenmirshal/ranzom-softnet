@@ -43,29 +43,32 @@ const Services = () => {
 
   return (
     <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Services</h2>
-        <p className="text-gray-600 mb-12">
-          Explore a range of solutions tailored to meet your business needs.
-        </p>
-        
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-              data-aos="fade-up"
-            >
-              <div className="flex justify-center mb-4 transform transition-transform hover:scale-110">
-                <img src={service.icon} alt={`${service.title} Icon`} width={130} height={130} />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+    <div className="container mx-auto text-center">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Services</h2>
+      <p className="text-gray-600 mb-12">
+        Explore a range of solutions tailored to meet your business needs.
+      </p>
+      
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((service, index) => (
+          <div 
+            key={index} 
+            className="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-2xl hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 hover:translate-y-2"
+            data-aos="fade-up"
+          >
+            <div className="flex justify-center mb-4 transform transition-transform hover:scale-110">
+              <img src={service.icon} alt={`${service.title} Icon`} width={130} height={130} />
             </div>
-          ))}
-        </div>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2 transition-all duration-300 group-hover:text-gray-900">
+              {service.title}
+            </h3>
+            <p className="text-gray-600 transition-all duration-300 group-hover:text-gray-800">{service.description}</p>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
+  </section>
+  
   );
 };
 

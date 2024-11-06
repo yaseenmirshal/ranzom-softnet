@@ -5,6 +5,7 @@ import About from './Components/About';
 import Service from './Components/Service';
 import Contact from './Components/Contact';
 import Works from './Components/Works';
+import Stacks from './Components/Stacks';
 
 export default function Home() {
   return (
@@ -17,12 +18,12 @@ export default function Home() {
         {/* Main content container with flex row for side-by-side layout */}
         <div className="relative z-10 flex flex-col md:flex-row justify-between items-center w-full space-y-10 md:space-y-0 px-4 sm:px-8 md:px-16">
           {/* Text content aligned to the left */}
-          <div className="text-center md:text-left md:w-1/2 mt-14">
+          <div className=" md:text-left md:w-1/2 mt-14">
             <p className="uppercase text-xs sm:text-sm tracking-widest text-gray-400 mb-2">
               Inspire the next
             </p>
 
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
+            <h1 className="text-4xl text-start sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Empower Your<br /> vision <span className="text-violet-500">goals</span> with{" "}
               <span className="text-[#ff4d67]">Ranzom Softnet</span>
             </h1>
@@ -31,8 +32,8 @@ export default function Home() {
               We will deliver you marketing and technology <br className="hidden md:block" />solutions in the best way.
             </p>
 
-            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-5">
-              <button className="bg-transparent border border-violet-500 text-white px-4 sm:px-6 py-2 rounded-full text-sm md:text-lg font-semibold hover:bg-violet-500 hover:text-white transition duration-200">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-4 md:space-x-5">
+              <button className="bg-transparent w-44 md:w-auto border border-violet-500 text-white px-4 sm:px-6 py-2 rounded-full text-sm md:text-lg font-semibold hover:bg-violet-500 hover:text-white transition duration-200">
                 Connect us now!
               </button>
               <div className="flex space-x-3">
@@ -40,7 +41,7 @@ export default function Home() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-violet-500 hover:bg-violet-500 hover:text-white p-2 text-base rounded-full border border-violet-500 transition duration-200"
+                  className="text-violet-500 text-base hover:bg-violet-500 hover:text-white p-2  rounded-full border border-violet-500 transition duration-200"
                 >
                   <FaInstagram />
                 </a>
@@ -107,7 +108,8 @@ export default function Home() {
       </div>
       <About/>
       <Service/>
-      <Works/>
+      {/* <Works/> */}
+      <Stacks/>
       <Contact/>
      
     </>

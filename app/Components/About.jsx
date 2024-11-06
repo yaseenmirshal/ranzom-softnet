@@ -39,7 +39,7 @@ const About = () => {
         {/* Illustration Section */}
         <div 
           className="lg:w-1/2 flex justify-center lg:justify-end"
-          data-aos="fade-left" // Illustration will slide in from the left
+          data-aos="fade-right" // Illustration will slide in from the left
         >
           <img
             src="https://static.vecteezy.com/system/resources/previews/010/873/246/large_2x/3d-business-man-presenting-business-growth-illustration-png.png"
