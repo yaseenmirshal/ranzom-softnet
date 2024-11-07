@@ -1,5 +1,5 @@
 // components/Footer.js
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -59,11 +59,15 @@ export default function Footer() {
           <p>&copy; 2023 yminnovation. All rights reserved.</p>
           {/* Social Icons */}
           <div className="flex text-xl space-x-6 mt-3 md:mt-0">
-            <FaFacebook className="hover:text-white cursor-pointer" />
-            <FaTwitter className="hover:text-white cursor-pointer" />
+          <a href="http://wa.me/9947234099" target='_blank'> 
+           <FaWhatsapp className="hover:text-white cursor-pointer" />
+           </a>
+           <a href="https://www.instagram.com/ranzomsoftnet/" target='_blank'>
             <FaInstagram className="hover:text-white cursor-pointer" />
+            </a>
+            <a href="https://www.linkedin.com/company/ranzom-softnet/" target='_blank'>
             <FaLinkedin className="hover:text-white cursor-pointer" />
-            
+            </a>
           </div>
         </div>
       </div>

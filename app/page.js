@@ -5,11 +5,12 @@ import About from './Components/About';
 import Service from './Components/Service';
 import Contact from './Components/Contact';
 import Stacks from './Components/Stacks';
+import Works from './Components/Works';
 
 export default function Home() {
   return (
     <>
-      <div className="bg-[#0a012a] min-h-screen mt-14 md:mt-0 flex flex-col justify-center items-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
+      <div id='home' className="bg-[#0a012a] min-h-screen mt-14 md:mt-0 flex flex-col justify-center items-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 flex justify-center items-center text-[80px] sm:text-[150px] lg:text-[200px] font-extrabold text-[#0a012a] opacity-10">
           RANZOM SOFTNET
         </div>
@@ -32,12 +33,14 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-4 md:space-x-5">
+              <a href='http://wa.me/9947234099' target='_blank'>
               <button className="bg-transparent w-44 md:w-auto border border-violet-500 text-white px-4 sm:px-6 py-2 rounded-full text-sm md:text-lg font-semibold hover:bg-violet-500 hover:text-white transition duration-200">
                 Connect us now!
               </button>
+              </a>
               <div className="flex space-x-3">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/ranzomsoftnet/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-violet-500 text-base hover:bg-violet-500 hover:text-white p-2  rounded-full border border-violet-500 transition duration-200"
@@ -46,7 +49,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://whatsapp.com"
+                  href="http://wa.me/9947234099"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-violet-500 hover:bg-violet-500 hover:text-white p-2 text-base rounded-full border border-violet-500 transition duration-200"
@@ -55,7 +58,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/ranzom-softnet/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-violet-500 hover:bg-violet-500 hover:text-white p-2 text-base rounded-full border border-violet-500 transition duration-200"
@@ -63,14 +66,7 @@ export default function Home() {
                   <FaLinkedin />
                 </a>
 
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-violet-500 hover:bg-violet-500 hover:text-white p-2 text-base rounded-full border border-violet-500 transition duration-200"
-                >
-                  <FaTwitter />
-                </a>
+               
               </div>
             </div>
           </div>
@@ -88,15 +84,15 @@ export default function Home() {
         {/* Stats Section */}
         <div className="mt-16 mb-16 md:mb-0 flex flex-wrap justify-around w-full text-center space-y-8 sm:space-y-0">
           <div className="w-1/2 sm:w-auto text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold">50+</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold">30+</h2>
             <p className="text-gray-400 text-sm sm:text-lg">Projects Completed</p>
           </div>
           <div className="w-1/2 sm:w-auto text-center ">
-            <h2 className="text-4xl sm:text-5xl font-bold mt-[-35px] md:mt-0">4</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold mt-[-35px] md:mt-0">2</h2>
             <p className="text-gray-400 text-sm sm:text-lg">Years of Experience</p>
           </div>
           <div className="w-1/2 sm:w-auto text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold">1K+</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold">200+</h2>
             <p className="text-gray-400 text-sm sm:text-lg">Happy Clients</p>
           </div>
           <div className="w-1/2 sm:w-auto text-center">

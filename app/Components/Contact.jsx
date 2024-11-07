@@ -1,92 +1,67 @@
 'use client'
-import React, { useState } from 'react';
-import Link from 'next/link';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
-const Navbar = () => {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false); // State for toggling the navbar
-
-  // Handle toggle for opening/closing the mobile menu
-  const handleNavbarToggle = () => {
-    setIsNavbarOpen(!isNavbarOpen);
-  };
-
-  // Close the navbar when a link is clicked (mobile view)
-  const handleLinkClick = () => {
-    if (window.innerWidth <= 1024) {
-      setIsNavbarOpen(false); // Close the navbar on smaller screens when a link is clicked
-    }
-  };
-
+const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+  
   return (
-    <nav id='contact' className="bg-white bg-opacity-30 backdrop-blur-lg fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:bg-gray-900 dark:bg-opacity-30 dark:border-gray-600">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="./images/rslogo.png" className="h-12 mr-[-10px]" alt="Logo" />
-          <span className="self-center text-2xl md:text-3xl font-semibold whitespace-nowrap dark:text-white">Ranzom Softnet</span>
-        </Link>
+    <section id='contact' className="bg-white py-16 px-6 md:px-12 lg:px-24">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-start">
+        
+        {/* Left Side: Social Section */}
+        <div data-aos="fade-right" className="flex flex-col items-center lg:items-start text-center lg:text-left">
+          <h3 className="text-3xl font-bold text-violet-500 mb-4">Let’s Connect</h3>
+          <p className="text-gray-600 mb-6 max-w-md">
+            Reach out through our social channels or leave us a message to start your journey with us.
+          </p>
 
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="hidden lg:block text-white bg-violet-700 hover:bg-violet-600 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-violet-600 dark:hover:bg-violet-500 dark:focus:ring-violet-800"
-          >
-            Contact Us
-          </button>
-
-          {/* Hamburger menu button */}
-          <button
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            onClick={handleNavbarToggle} // Toggle mobile menu visibility
-            aria-controls="navbar-sticky"
-            aria-expanded={isNavbarOpen ? 'true' : 'false'}
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
-          </button>
+          {/* Social Media Icons */}
+          <div className="flex space-x-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-violet-500 hover:text-violet-700 transition-colors">
+              <FaFacebookF size={24} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-violet-500 hover:text-violet-700 transition-colors">
+              <FaTwitter size={24} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-violet-500 hover:text-violet-700 transition-colors">
+              <FaLinkedinIn size={24} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-violet-500 hover:text-violet-700 transition-colors">
+              <FaInstagram size={24} />
+            </a>
+          </div>
         </div>
 
-        {/* Mobile menu (toggle visibility) */}
-        <div
-          className={`items-center font-bold justify-between w-full md:flex md:w-auto md:order-1 ${isNavbarOpen ? 'block' : 'hidden'}`} 
-          id="navbar-sticky"
-        >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-            {/* Home Link */}
-            <li>
-              <Link href="/" onClick={handleLinkClick} className="block py-2 px-3 text-white bg-violet-500 rounded md:bg-transparent md:text-violet-500 md:p-0 md:dark:text-blue-500" aria-current="page">
-                Home
-              </Link>
-            </li>
-
-            {/* About Link */}
-            <li>
-              <Link href="about" onClick={handleLinkClick} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-violet-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                About
-              </Link>
-            </li>
-
-            {/* Services Link */}
-            <li>
-              <Link href="services" onClick={handleLinkClick} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-violet-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                Services
-              </Link>
-            </li>
-
-            {/* Contact Link */}
-            <li>
-              <Link href="contact" onClick={handleLinkClick} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-violet-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                Contact
-              </Link>
-            </li>
-          </ul>
+        {/* Right Side: Contact Form */}
+        <div data-aos="fade-up">
+          <form className="bg-gray-50 p-8 rounded-lg shadow-lg">
+            <div className="grid gap-6">
+              <div className="flex flex-col">
+                <label htmlFor="name" className="text-gray-700 font-semibold mb-1">Name</label>
+                <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-violet-500" />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="email" className="text-gray-700 font-semibold mb-1">Email</label>
+                <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-violet-500" />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="message" className="text-gray-700 font-semibold mb-1">Message</label>
+                <textarea id="message" rows="4" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-violet-500"></textarea>
+              </div>
+              <button className="w-full bg-violet-500 text-white py-2 rounded hover:bg-violet-600 transition-colors">
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-    </nav>
+    </section>
   );
 };
 
-export default Navbar;
+export default Contact;
