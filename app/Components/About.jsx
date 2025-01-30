@@ -22,7 +22,9 @@ const About = () => {
           </h2>
           <h3 className="text-xl font-semibold text-[#3E2723] mb-4">Elevating Your Digital Future</h3>
           <p className="text-gray-600 leading-relaxed">
-            Ranzom Softnet is a forward-thinking software company dedicated to providing innovative solutions that drive digital transformation. We specialize in AI, front-end development, and custom software that cater to your business needs. Our mission is to empower businesses with technology that’s both robust and user-friendly.
+
+            Ranzom Technologies is a forward-thinking software company dedicated to providing innovative solutions that drive digital transformation. We specialize in AI, front-end development, and custom software that cater to your business needs. Our mission is to empower businesses with technology that’s both robust and user-friendly.
+
           </p>
          
           {/* Our Journey Section */}
@@ -31,7 +33,9 @@ const About = () => {
               Our Journey
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Founded with a vision to revolutionize the tech industry, Ranzom Softnet began as a small team with big ambitions. Through dedication and a commitment to innovation, we have grown into a trusted partner for businesses worldwide, continuously pushing the boundaries of what’s possible in the world of software.
+
+              Founded with a vision to revolutionize the tech industry, Ranzom Technologies began as a small team with big ambitions. Through dedication and a commitment to innovation, we have grown into a trusted partner for businesses worldwide, continuously pushing the boundaries of what’s possible in the world of software.
+
             </p>
           </div>
         </div>

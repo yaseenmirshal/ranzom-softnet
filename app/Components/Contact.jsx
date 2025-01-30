@@ -28,10 +28,12 @@ const Contact = () => {
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-violet-500 hover:text-violet-700 transition-colors">
               <FaTwitter size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-violet-500 hover:text-violet-700 transition-colors">
+
+            <a href="https://www.linkedin.com/company/ranzom-softnet/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-violet-500 hover:text-violet-700 transition-colors">
               <FaLinkedinIn size={24} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-violet-500 hover:text-violet-700 transition-colors">
+            <a href="https://www.instagram.com/ranzomtech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-violet-500 hover:text-violet-700 transition-colors">
+
               <FaInstagram size={24} />
             </a>
           </div>

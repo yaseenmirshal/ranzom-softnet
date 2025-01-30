@@ -12,7 +12,9 @@ export default function Home() {
     <>
       <div id='home' className="bg-[#0a012a] min-h-screen mt-14 md:mt-0 flex flex-col justify-center items-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 flex justify-center items-center text-[80px] sm:text-[150px] lg:text-[200px] font-extrabold text-[#0a012a] opacity-10">
-          RANZOM SOFTNET
+
+          RANZOM 
+
         </div>
 
         {/* Main content container with flex row for side-by-side layout */}
@@ -25,7 +27,10 @@ export default function Home() {
 
             <h1 className="text-4xl text-start sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Empower Your<br /> vision <span className="text-violet-500">goals</span> with{" "}
-              <span className="text-[#ff4d67]">Ranzom Softnet</span>
+
+
+              <span className="text-[#ff4d67]">Ranzom Technologies</span>
+
             </h1>
 
             <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-8">

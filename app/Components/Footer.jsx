@@ -12,8 +12,10 @@ export default function Footer() {
         {/* Logo and Description */}
         <div className="space-y-3">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="./images/rslogo.png" className="h-10 mr-[-10px]" alt="Flowbite Logo"/>
-      <span className="self-center text-2xl md:text-1xl  font-semibold whitespace-nowrap dark:text-white">Ranzom Softnet</span>
+
+      <img src="./images/rtblackk.png" className="h-10 mr-[-10px]" alt="Flowbite Logo"/>
+      <span className="self-center text-2xl md:text-1xl  font-semibold whitespace-nowrap dark:text-white">Ranzom Technologies</span>
+
   </Link>
           <p className="text-gray-400 text-sm">
             Were passionate about delivering the most effective marketing and technology solutions. We take the time
@@ -56,13 +58,17 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className="border-t border-gray-700 py-3">
         <div className="container mx-auto flex flex-col items-center md:flex-row justify-between text-center text-gray-400 text-xs">
-          <p>&copy; 2023 yminnovation. All rights reserved.</p>
+
+          <p>&copy; 2023 <a href='https://www.instagram.com/ranzomtech/'>ranzomtech</a>. All rights reserved.</p>
+
           {/* Social Icons */}
           <div className="flex text-xl space-x-6 mt-3 md:mt-0">
           <a href="http://wa.me/9947234099" target='_blank'> 
            <FaWhatsapp className="hover:text-white cursor-pointer" />
            </a>
-           <a href="https://www.instagram.com/ranzomsoftnet/" target='_blank'>
+
+           <a href="https://www.instagram.com/ranzomtech/" target='_blank'>
+
             <FaInstagram className="hover:text-white cursor-pointer" />
             </a>
             <a href="https://www.linkedin.com/company/ranzom-softnet/" target='_blank'>
