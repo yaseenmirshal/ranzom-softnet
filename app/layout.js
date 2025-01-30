@@ -24,9 +24,11 @@ const sora = Sora({
 });
 
 export const metadata = {
-  title: "Ranzom Softnet",
-  description: "Software Company",
+  title: "Ranzom Technologies | Software Development & AI Solutions",
+  description: "Ranzom Technologies - Leading software development, AI solutions, web development, UI/UX design, and digital transformation services.",
+  keywords: "software development, AI solutions, web development, UI/UX design, mobile app development, digital transformation, IT consulting, cloud computing, machine learning, custom software, technology services, Ranzom Technologies",
 };
+
 
 export default function RootLayout({ children }) {
   return (
