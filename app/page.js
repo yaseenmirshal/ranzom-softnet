@@ -53,7 +53,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
               >
-                <button className="w-44 md:w-auto border border-blue-500 text-white px-6 py-2 rounded-md text-lg font-semibold hover:bg-blue-500 transition duration-300">
+                <button className="w-52 md:w-auto border border-blue-500 text-white px-6 py-2 rounded-md text-lg font-semibold hover:bg-blue-500 transition duration-300">
                   Connect Now
                 </button>
               </motion.a>
@@ -98,30 +98,32 @@ export default function Home() {
         </motion.div>
 
         {/* Stats Section with Animated CountUp */}
-        <motion.div
-          className="mt-16 mb-16 flex flex-wrap justify-around w-full text-center space-y-8 sm:space-y-0"
-          data-aos="fade-up"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-        >
-          {[
-            { label: "Projects Completed", value: 30 },
-            { label: "Years of Experience", value: 2 },
-            { label: "Happy Clients", value: 200 },
-            { label: "Open Source Projects", value: 3 },
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              className="w-1/2 sm:w-auto text-center p-4  hover:scale-105 transition-all duration-300"
-            >
-              <h2 className="text-4xl sm:text-5xl font-bold text-blue-400">
-                <CountUp end={stat.value} duration={3} />+
-              </h2>
-              <p className="text-gray-400 text-sm sm:text-lg">{stat.label}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+       {/* Stats Section with Animated CountUp */}
+<motion.div
+  className="mt-10 md:mt-20 mb-16 w-full grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+  data-aos="fade-up"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1.5 }}
+>
+  {[
+    { label: "Projects Completed", value: 30 },
+    { label: "Years of Experience", value: 2 },
+    { label: "Happy Clients", value: 200 },
+    { label: "Open Source Projects", value: 3 },
+  ].map((stat, index) => (
+    <motion.div
+      key={index}
+      className="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
+    >
+      <h2 className="text-4xl sm:text-5xl font-bold text-blue-400">
+        <CountUp end={stat.value} duration={3} />+
+      </h2>
+      <p className="text-gray-400 text-sm sm:text-lg">{stat.label}</p>
+    </motion.div>
+  ))}
+</motion.div>
+
       </div>
 
       <About />
