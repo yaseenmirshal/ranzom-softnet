@@ -1,113 +1,134 @@
-import React from 'react';
-import Image from 'next/image';
-import { FaInstagram, FaWhatsapp, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import About from './Components/About';
-import Service from './Components/Service';
-import Contact from './Components/Contact';
-import Stacks from './Components/Stacks';
-import Works from './Components/Works';
+'use client';
+import React, { useEffect } from "react";
+import Image from "next/image";
+import { FaInstagram, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css"; // AOS styles
+import CountUp from "react-countup"; // For animated numbers
+import { motion } from "framer-motion"; // For smooth animations
+import About from "./Components/About";
+import Service from "./Components/Service";
+import Contact from "./Components/Contact";
+import Stacks from "./Components/Stacks";
+import Works from "./Components/Works";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <>
-      <div id='home' className="bg-[#0a012a] min-h-screen mt-14 md:mt-0 flex flex-col justify-center items-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
-        
-
-        {/* Main content container with flex row for side-by-side layout */}
-        <div className="relative z-10 flex flex-col md:flex-row justify-between items-center w-full space-y-10 md:space-y-0 px-4 sm:px-8 md:px-16">
-          {/* Text content aligned to the left */}
-          <div className=" md:text-left md:w-1/2 mt-14">
+      <div
+        id="home"
+        className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 min-h-screen mt-14 md:mt-10 flex flex-col justify-center items-center text-white overflow-hidden px-4 sm:px-6 lg:px-8"
+      >
+        {/* Main content container */}
+        <motion.div
+          className="relative z-10 flex flex-col md:flex-row justify-between items-center w-full space-y-10 md:space-y-0 px-4 sm:px-8 md:px-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          {/* Left Side: Text Content */}
+          <motion.div className="md:text-left md:w-1/2 mt-14" data-aos="fade-right">
             <p className="uppercase text-xs sm:text-sm tracking-widest text-gray-400 mb-2">
               Inspire the next
             </p>
 
-            <h1 className="text-4xl text-start sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              Empower Your<br /> vision <span className="text-violet-500">goals</span> with{" "}
-
-
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
+              Empower Your <br /> Vision{" "}
+              <span className="text-blue-400">Goals</span> with{" "}
               <span className="text-[#ff4d67]">Ranzom Technologies</span>
-
             </h1>
 
             <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-8">
-              We will deliver you marketing and technology <br className="hidden md:block" />solutions in the best way.
+              We provide cutting-edge marketing & technology solutions tailored for your success.
             </p>
 
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-4 md:space-x-5">
-              <a href='http://wa.me/9947234099' target='_blank'>
-              <button className="bg-transparent w-44 md:w-auto border border-violet-500 text-white px-4 sm:px-6 py-2 rounded-full text-sm md:text-lg font-semibold hover:bg-violet-500 hover:text-white transition duration-200">
-                Connect us now!
-              </button>
-              </a>
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-5">
+              <motion.a
+                href="http://wa.me/9947234099"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+              >
+                <button className="w-44 md:w-auto border border-blue-500 text-white px-6 py-2 rounded-md text-lg font-semibold hover:bg-blue-500 transition duration-300">
+                  Connect Now
+                </button>
+              </motion.a>
+
               <div className="flex space-x-3">
-                <a
-                  href="https://www.instagram.com/ranzomsoftnet/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-violet-500 text-base hover:bg-violet-500 hover:text-white p-2  rounded-full border border-violet-500 transition duration-200"
-                >
-                  <FaInstagram />
-                </a>
-
-                <a
-                  href="http://wa.me/9947234099"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-violet-500 hover:bg-violet-500 hover:text-white p-2 text-base rounded-full border border-violet-500 transition duration-200"
-                >
-                  <FaWhatsapp />
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/company/ranzom-softnet/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-violet-500 hover:bg-violet-500 hover:text-white p-2 text-base rounded-full border border-violet-500 transition duration-200"
-                >
-                  <FaLinkedin />
-                </a>
-
-               
+                {[
+                  { icon: <FaInstagram size={20} />, link: "https://www.instagram.com/ranzomsoftnet/" },
+                  { icon: <FaWhatsapp size={20} />, link: "http://wa.me/9947234099" },
+                  { icon: <FaLinkedin size={20} />, link: "https://www.linkedin.com/company/ranzom-softnet/" },
+                ].map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 text-blue-400 border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white transition duration-300"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Illustration on the right */}
-          <div className="md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0">
-            <img
-              src="/images/roboimg.png" // Updated src path
+          {/* Right Side: Illustration */}
+          <motion.div
+            className="md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0"
+            data-aos="fade-left"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <Image
+              src="/images/roboimg.png"
               alt="Illustration"
-              className="w-[250px] sm:w-[350px] md:w-[500px] h-auto"
+              width={500}
+              height={500}
+              className="object-contain drop-shadow-2xl"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Stats Section */}
-        <div className="mt-16 mb-16 md:mb-0 flex flex-wrap justify-around w-full text-center space-y-8 sm:space-y-0">
-          <div className="w-1/2 sm:w-auto text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold">30+</h2>
-            <p className="text-gray-400 text-sm sm:text-lg">Projects Completed</p>
-          </div>
-          <div className="w-1/2 sm:w-auto text-center ">
-            <h2 className="text-4xl sm:text-5xl font-bold mt-[-35px] md:mt-0">2</h2>
-            <p className="text-gray-400 text-sm sm:text-lg">Years of Experience</p>
-          </div>
-          <div className="w-1/2 sm:w-auto text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold">200+</h2>
-            <p className="text-gray-400 text-sm sm:text-lg">Happy Clients</p>
-          </div>
-          <div className="w-1/2 sm:w-auto text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold">3</h2>
-            <p className="text-gray-400 text-sm sm:text-lg">Open Source Projects</p>
-          </div>
-        </div>
+        {/* Stats Section with Animated CountUp */}
+        <motion.div
+          className="mt-16 mb-16 flex flex-wrap justify-around w-full text-center space-y-8 sm:space-y-0"
+          data-aos="fade-up"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          {[
+            { label: "Projects Completed", value: 30 },
+            { label: "Years of Experience", value: 2 },
+            { label: "Happy Clients", value: 200 },
+            { label: "Open Source Projects", value: 3 },
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              className="w-1/2 sm:w-auto text-center p-4  hover:scale-105 transition-all duration-300"
+            >
+              <h2 className="text-4xl sm:text-5xl font-bold text-blue-400">
+                <CountUp end={stat.value} duration={3} />+
+              </h2>
+              <p className="text-gray-400 text-sm sm:text-lg">{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-      <About/>
-      <Service/>
+
+      <About />
+      <Service />
+      <Stacks />
       {/* <Works/> */}
-      <Stacks/>
-      <Contact/>
-     
+      <Contact />
     </>
   );
 }
