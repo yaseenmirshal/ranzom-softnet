@@ -1,7 +1,9 @@
-'use client'
+'use client';
 import { useEffect } from 'react';
 import AOS from 'aos';
+import { FaLaptopCode, FaMobileAlt, FaPaintBrush, FaTshirt, FaBullhorn } from 'react-icons/fa';
 import 'aos/dist/aos.css';
+import { motion } from 'framer-motion'; // For animations
 
 const Services = () => {
   useEffect(() => {
@@ -10,65 +12,79 @@ const Services = () => {
 
   const services = [
     {
-      icon: 'https://cdn3d.iconscout.com/3d/premium/thumb/web-development-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--html-logo-technology-design-pack-business-illustrations-4496032.png?f.png',
+      icon: <FaLaptopCode size={40} />,
       title: 'Web Development',
       description: 'Building responsive, high-performance websites tailored to your business needs.',
+      delay: 200,
     },
     {
-      icon: 'https://cdn3d.iconscout.com/3d/premium/thumb/app-development-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--application-programming-coding-computer-pack-design-illustrations-4315311.png',
+      icon: <FaMobileAlt size={40} />,
       title: 'App Development',
       description: 'Custom mobile applications that enhance user experience and engagement.',
+      delay: 400,
     },
     {
-      icon: 'https://png.pngtree.com/png-clipart/20211024/original/pngtree-gradient-ui-ux-user-interface-icon-mobile-for-social-media-png-image_6866328.png',
+      icon: <FaPaintBrush size={40} />,
       title: 'UI/UX Design',
       description: 'Crafting user-friendly and visually appealing designs for maximum impact.',
+      delay: 600,
     },
     {
-      icon: 'https://cdn3d.iconscout.com/3d/premium/thumb/graphic-design-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--tool-designing-development-illustrations-4138040.png',
+      icon: <FaTshirt size={40} />,
       title: 'Graphic Design',
       description: 'Creative graphic solutions to visually represent your brand’s unique identity.',
+      delay: 800,
     },
     {
-      icon: 'https://static.vecteezy.com/system/resources/thumbnails/048/027/289/small_2x/nfc-card-3d-illustration-a-hand-hold-nfc-card-png.png',
-      title: 'NFC Solutions',
-      description: 'Innovative NFC technology integration for seamless, modern solutions.',
-    },
-    {
-      icon: 'https://cdn3d.iconscout.com/3d/premium/thumb/digital-marketing-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--analytics-logo-social-media-pack-business-illustrations-5789449.png',
+      icon: <FaBullhorn size={40} />,
       title: 'Digital Marketing',
       description: 'Strategies to boost your brand visibility, engagement, and customer loyalty.',
+      delay: 1000,
     },
   ];
 
   return (
-    <section id='services' className="bg-white py-16 px-6 md:px-12 lg:px-24 mt-[-70px] md:mt-0">
-    <div className="container mx-auto text-center">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Services</h2>
-      <p className="text-gray-600 mb-12">
-        Explore a range of solutions tailored to meet your business needs.
-      </p>
-      
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((service, index) => (
-          <div 
-            key={index} 
-            className="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-2xl hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 hover:translate-y-2"
+    <section id="services" className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 py-20 text-white">
+      <div className="container mx-auto text-center px-6">
+        {/* Section Title */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <p className="text-sm uppercase tracking-widest text-gray-400" data-aos="fade-up">
+            Our Services
+          </p>
+          <h2
+            className="text-3xl md:text-5xl font-bold text-white mt-2"
             data-aos="fade-up"
+            data-aos-delay="200"
           >
-            <div className="flex justify-center mb-4 transform transition-transform hover:scale-110">
-              <img src={service.icon} alt={`${service.title} Icon`} width={130} height={130} />
-            </div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2 transition-all duration-300 group-hover:text-gray-900">
-              {service.title}
-            </h3>
-            <p className="text-gray-600 transition-all duration-300 group-hover:text-gray-800">{service.description}</p>
-          </div>
-        ))}
+            Our Expertise at <span className="text-blue-400">Ranzom Technologies</span>
+          </h2>
+          <p className="text-gray-300 mt-4 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+            Explore a range of solutions tailored to meet your business needs with cutting-edge technology.
+          </p>
+        </motion.div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="bg-gray-800 p-6 rounded-lg shadow-lg text-center flex flex-col items-center space-y-4 hover:scale-105 transition-transform duration-300"
+              data-aos="fade-up"
+              data-aos-delay={service.delay}
+            >
+              <div className="text-blue-400">{service.icon}</div>
+              <h3 className="text-xl font-semibold">{service.title}</h3>
+              <p className="text-gray-300 text-sm">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-  
+    </section>
   );
 };
 

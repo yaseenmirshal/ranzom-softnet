@@ -10,7 +10,7 @@ import About from "./Components/About";
 import Service from "./Components/Service";
 import Contact from "./Components/Contact";
 import Stacks from "./Components/Stacks";
-import Works from "./Components/Works";
+import Whychoose from "./Components/Whychoose";
 
 export default function Home() {
   useEffect(() => {
@@ -125,7 +125,7 @@ export default function Home() {
 </motion.div>
 
       </div>
-
+      <Whychoose/>
       <About />
       <Service />
       <Stacks />

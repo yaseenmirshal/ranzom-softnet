@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import AOS from 'aos';
@@ -14,8 +14,8 @@ const Stacks = () => {
   }, []);
 
   return (
-    <section className="bg-[#0d0d22] py-16 px-6 md:px-12 lg:px-24 text-center text-white">
-      <h2 className="text-3xl font-bold text-purple-500 mb-2" data-aos="fade-up">Our Stacks</h2>
+    <section className="bg-gradient-to-b from-[#0d0d22] via-[#19192f] to-[#0d0d22] py-16 px-6 md:px-12 lg:px-24 text-center text-white">
+      <h2 className="text-3xl font-bold text-blue-400 mb-2" data-aos="fade-up">Our Stacks</h2>
       <p className="text-gray-300 mb-12" data-aos="fade-up" data-aos-delay="100">
         We put your ideas and thus your wishes in the form of a unique project that inspires our customers.
       </p>
@@ -23,7 +23,7 @@ const Stacks = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {/* Technology Card */}
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
         >
           <img src="https://vectorcrop.com/assets/images/flutter.svg" alt="Flutter" width={50} height={50} />
@@ -31,7 +31,7 @@ const Stacks = () => {
         </div>
 
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="100"
         >
@@ -40,7 +40,7 @@ const Stacks = () => {
         </div>
 
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="200"
         >
@@ -49,7 +49,7 @@ const Stacks = () => {
         </div>
 
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="300"
         >
@@ -58,7 +58,7 @@ const Stacks = () => {
         </div>
 
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="400"
         >
@@ -67,7 +67,7 @@ const Stacks = () => {
         </div>
 
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="500"
         >
@@ -75,10 +75,8 @@ const Stacks = () => {
           <p className="mt-2">HTML</p>
         </div>
 
-        
-
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="700"
         >
@@ -87,7 +85,7 @@ const Stacks = () => {
         </div>
 
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="800"
         >
@@ -96,7 +94,7 @@ const Stacks = () => {
         </div>
 
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="900"
         >
@@ -105,15 +103,13 @@ const Stacks = () => {
         </div>
 
         <div
-          className="bg-[#19192f] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#292943] hover:shadow-lg hover:border hover:border-purple-500 hover:text-purple-500"
+          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
           data-aos="zoom-in"
           data-aos-delay="1000"
         >
           <img src="https://vectorcrop.com/assets/images/figma.png" alt="Figma" width={50} height={50} />
           <p className="mt-2">Figma</p>
         </div>
-
-      
       </div>
     </section>
   );
