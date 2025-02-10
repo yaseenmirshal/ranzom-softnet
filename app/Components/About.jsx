@@ -89,7 +89,7 @@ const About = () => {
             alt="About Ranzom Technologies"
             width={500}
             height={500}
-            className="rounded-lg shadow-lg drop-shadow-2xl"
+            className="rounded-lg "
             data-aos="zoom-in"
             data-aos-delay="800"
           />

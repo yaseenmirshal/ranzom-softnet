@@ -18,7 +18,7 @@ function Navbar() {
       <nav className="bg-white backdrop-blur-lg fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-sm">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="./images/rtblackk.png" className="h-12 mr-[-10px]" alt="Ranzom Tech Logo" />
+            <img src="./images/rtbgrm.png" className="h-14 mr-[-10px]" alt="Ranzom Tech Logo" />
             <span className="self-center text-2xl md:text-3xl font-semibold whitespace-nowrap text-gray-800">Ranzom Tech</span>
           </Link>
 
