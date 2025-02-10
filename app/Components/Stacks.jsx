@@ -7,108 +7,43 @@ import 'aos/dist/aos.css';
 const Stacks = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800, // Animation duration
-      easing: 'ease-in-out', // Easing style
-      once: true, // Only animate once
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
     });
   }, []);
 
   return (
-    <section className="bg-gradient-to-b from-[#0d0d22] via-[#19192f] to-[#0d0d22] py-16 px-6 md:px-12 lg:px-24 text-center text-white">
-      <h2 className="text-3xl font-bold text-blue-400 mb-2" data-aos="fade-up">Our Stacks</h2>
-      <p className="text-gray-300 mb-12" data-aos="fade-up" data-aos-delay="100">
-        We put your ideas and thus your wishes in the form of a unique project that inspires our customers.
-      </p>
+    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 flex justify-center">
+      <div className="bg-[#1a1a1a] p-8 md:p-12 rounded-2xl shadow-lg w-full max-w-7xl text-center text-white border border-gray-700">
+        <h2 className="text-3xl font-bold text-blue-400 mb-2" data-aos="fade-up">Our Stacks</h2>
+        <p className="text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="100">
+          We put your ideas and thus your wishes in the form of a unique project that inspires our customers.
+        </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {/* Technology Card */}
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-        >
-          <img src="https://vectorcrop.com/assets/images/flutter.svg" alt="Flutter" width={50} height={50} />
-          <p className="mt-2">Flutter</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
-          <img src="https://vectorcrop.com/assets/images/react.png" alt="React" width={50} height={50} />
-          <p className="mt-2">React</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="200"
-        >
-          <img src="https://vectorcrop.com/assets/images/js.png" alt="JavaScript" width={50} height={50} />
-          <p className="mt-2">JavaScript</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="300"
-        >
-          <img src="https://vectorcrop.com/assets/images/node.png" alt="NodeJs" width={50} height={50} />
-          <p className="mt-2">NodeJs</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
-          <img src="https://vectorcrop.com/assets/images/python.png" alt="Python" width={50} height={50} />
-          <p className="mt-2">Python</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="500"
-        >
-          <img src="https://vectorcrop.com/assets/images/html.png" alt="HTML" width={50} height={50} />
-          <p className="mt-2">HTML</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="700"
-        >
-          <img src="https://vectorcrop.com/assets/images/mongo.png" alt="MongoDB" width={50} height={50} />
-          <p className="mt-2">MongoDB</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="800"
-        >
-          <img src="https://vectorcrop.com/assets/images/mysql.png" alt="MySQL" width={50} height={50} />
-          <p className="mt-2">MySQL</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="900"
-        >
-          <img src="https://karmanivero.us/assets/images/logo-nextjs.png" alt="Android" width={50} height={50} />
-          <p className="mt-2">Next js</p>
-        </div>
-
-        <div
-          className="bg-[#292943] p-4 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#3e3e52] hover:shadow-lg hover:border hover:border-blue-400 hover:text-blue-400"
-          data-aos="zoom-in"
-          data-aos-delay="1000"
-        >
-          <img src="https://vectorcrop.com/assets/images/figma.png" alt="Figma" width={50} height={50} />
-          <p className="mt-2">Figma</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {[
+            { src: 'https://vectorcrop.com/assets/images/flutter.svg', name: 'Flutter' },
+            { src: 'https://vectorcrop.com/assets/images/react.png', name: 'React' },
+            { src: 'https://vectorcrop.com/assets/images/js.png', name: 'JavaScript' },
+            { src: 'https://vectorcrop.com/assets/images/node.png', name: 'NodeJs' },
+            { src: 'https://vectorcrop.com/assets/images/python.png', name: 'Python' },
+            { src: 'https://vectorcrop.com/assets/images/html.png', name: 'HTML' },
+            { src: 'https://vectorcrop.com/assets/images/mongo.png', name: 'MongoDB' },
+            { src: 'https://vectorcrop.com/assets/images/mysql.png', name: 'MySQL' },
+            { src: 'https://karmanivero.us/assets/images/logo-nextjs.png', name: 'Next.js' },
+            { src: 'https://vectorcrop.com/assets/images/figma.png', name: 'Figma' },
+          ].map((stack, index) => (
+            <div
+              key={stack.name}
+              className="bg-[#222222] p-4 rounded-xl flex flex-col items-center transition-transform transform hover:scale-105 hover:bg-[#2e2e2e] hover:shadow-md hover:border hover:border-blue-400 hover:text-blue-400"
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+            >
+              <img src={stack.src} alt={stack.name} width={50} height={50} />
+              <p className="mt-2">{stack.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

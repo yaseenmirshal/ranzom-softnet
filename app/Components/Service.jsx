@@ -1,9 +1,9 @@
 'use client';
 import { useEffect } from 'react';
 import AOS from 'aos';
-import { FaLaptopCode, FaMobileAlt, FaPaintBrush, FaTshirt, FaBullhorn } from 'react-icons/fa';
+import { FaLaptopCode, FaMobileAlt, FaPaintBrush, FaTshirt, FaBullhorn, FaRobot } from 'react-icons/fa';
 import 'aos/dist/aos.css';
-import { motion } from 'framer-motion'; // For animations
+import { motion } from 'framer-motion';
 
 const Services = () => {
   useEffect(() => {
@@ -41,10 +41,16 @@ const Services = () => {
       description: 'Strategies to boost your brand visibility, engagement, and customer loyalty.',
       delay: 1000,
     },
+    {
+      icon: <FaRobot size={40} />,
+      title: 'AI Automation (Coming Soon)',
+      description: 'Next-generation AI solutions to automate and optimize your business workflows.',
+      delay: 1200,
+    },
   ];
 
   return (
-    <section id="services" className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 py-20 text-white">
+    <section id="services" className="bg-white py-20 text-gray-900">
       <div className="container mx-auto text-center px-6">
         {/* Section Title */}
         <motion.div
@@ -53,17 +59,17 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <p className="text-sm uppercase tracking-widest text-gray-400" data-aos="fade-up">
+          <p className="text-sm uppercase tracking-widest text-gray-500" data-aos="fade-up">
             Our Services
           </p>
           <h2
-            className="text-3xl md:text-5xl font-bold text-white mt-2"
+            className="text-3xl md:text-5xl font-bold text-gray-900 mt-2"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Our Expertise at <span className="text-blue-400">Ranzom Technologies</span>
+            Our Expertise at <span className="text-blue-500">Ranzom Technologies</span>
           </h2>
-          <p className="text-gray-300 mt-4 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+          <p className="text-gray-700 mt-4 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
             Explore a range of solutions tailored to meet your business needs with cutting-edge technology.
           </p>
         </motion.div>
@@ -73,13 +79,15 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg text-center flex flex-col items-center space-y-4 hover:scale-105 transition-transform duration-300"
+              className="bg-white p-6 rounded-2xl shadow-lg text-center flex flex-col items-center space-y-4 hover:scale-105 transition-transform duration-300 border border-gray-200"
               data-aos="fade-up"
               data-aos-delay={service.delay}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
-              <div className="text-blue-400">{service.icon}</div>
+              <div className="text-blue-500">{service.icon}</div>
               <h3 className="text-xl font-semibold">{service.title}</h3>
-              <p className="text-gray-300 text-sm">{service.description}</p>
+              <p className="text-gray-600 text-sm">{service.description}</p>
             </motion.div>
           ))}
         </div>

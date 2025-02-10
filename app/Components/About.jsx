@@ -1,4 +1,3 @@
-'use client'
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -10,7 +9,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id='about' className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 py-16 px-6 md:px-12 lg:px-24 text-white">
+    <section id='about' className="bg-white py-16 px-6 md:px-12 lg:px-24 text-gray-900">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between">
         
         {/* Text Section */}
@@ -22,21 +21,21 @@ const About = () => {
           transition={{ duration: 1 }}
         >
           <motion.p 
-            className="uppercase text-sm tracking-widest text-blue-400 mb-2"
+            className="uppercase text-sm tracking-widest text-blue-600 mb-2"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             About Us
           </motion.p>
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             Elevating Your Digital Future
           </motion.h2>
           <motion.p 
-            className="text-gray-300 leading-relaxed"
+            className="text-gray-700 leading-relaxed"
             data-aos="fade-up"
             data-aos-delay="300"
           >
@@ -52,21 +51,21 @@ const About = () => {
             data-aos-delay="400"
           >
             <motion.p 
-              className="uppercase text-sm tracking-widest text-blue-400 mb-2"
+              className="uppercase text-sm tracking-widest text-blue-600 mb-2"
               data-aos="fade-up"
               data-aos-delay="500"
             >
               Our Journey
             </motion.p>
             <motion.h2 
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
               data-aos="fade-up"
               data-aos-delay="600"
             >
               From Vision to Reality
             </motion.h2>
             <motion.p 
-              className="text-gray-300 leading-relaxed"
+              className="text-gray-700 leading-relaxed"
               data-aos="fade-up"
               data-aos-delay="700"
             >

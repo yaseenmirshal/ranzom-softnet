@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <div
         id="home"
-        className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 min-h-screen mt-14 md:mt-10 flex flex-col justify-center items-center text-white overflow-hidden px-4 sm:px-6 lg:px-8"
+        className="bg-gradient-to-b from-gray-100 via-white to-gray-100 min-h-screen mt-14 md:mt-10 flex flex-col justify-center items-center text-gray-800 overflow-hidden px-4 sm:px-6 lg:px-8"
       >
         {/* Main content container */}
         <motion.div
@@ -32,17 +32,17 @@ export default function Home() {
         >
           {/* Left Side: Text Content */}
           <motion.div className="md:text-left md:w-1/2 mt-14" data-aos="fade-right">
-            <p className="uppercase text-xs sm:text-sm tracking-widest text-gray-400 mb-2">
+            <p className="uppercase text-xs sm:text-sm tracking-widest text-gray-600 mb-2">
               Inspire the next
             </p>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
               Empower Your <br /> Vision{" "}
-              <span className="text-blue-400">Goals</span> with{" "}
+              <span className="text-blue-600">Goals</span> with{" "}
               <span className="text-[#ff4d67]">Ranzom Technologies</span>
             </h1>
 
-            <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-8">
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg mb-8">
               We provide cutting-edge marketing & technology solutions tailored for your success.
             </p>
 
@@ -53,7 +53,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
               >
-                <button className="w-52 md:w-auto border border-blue-500 text-white px-6 py-2 rounded-md text-lg font-semibold hover:bg-blue-500 transition duration-300">
+                <button className="w-52 md:w-auto border border-blue-600 text-blue-600 px-6 py-2 rounded-md text-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">
                   Connect Now
                 </button>
               </motion.a>
@@ -69,7 +69,7 @@ export default function Home() {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 text-blue-400 border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white transition duration-300"
+                    className="p-3 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition duration-300"
                     whileHover={{ scale: 1.1 }}
                   >
                     {social.icon}
@@ -98,38 +98,36 @@ export default function Home() {
         </motion.div>
 
         {/* Stats Section with Animated CountUp */}
-       {/* Stats Section with Animated CountUp */}
-<motion.div
-  className="mt-10 md:mt-20 mb-16 w-full grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
-  data-aos="fade-up"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1.5 }}
->
-  {[
-    { label: "Projects Completed", value: 30 },
-    { label: "Years of Experience", value: 2 },
-    { label: "Happy Clients", value: 200 },
-    { label: "Open Source Projects", value: 3 },
-  ].map((stat, index) => (
-    <motion.div
-      key={index}
-      className="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
-    >
-      <h2 className="text-4xl sm:text-5xl font-bold text-blue-400">
-        <CountUp end={stat.value} duration={3} />+
-      </h2>
-      <p className="text-gray-400 text-sm sm:text-lg">{stat.label}</p>
-    </motion.div>
-  ))}
-</motion.div>
-
+        <motion.div
+          className="mt-10 md:mt-20 mb-16 w-full grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+          data-aos="fade-up"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          {[
+            { label: "Projects Completed", value: 30 },
+            { label: "Years of Experience", value: 2 },
+            { label: "Happy Clients", value: 200 },
+            { label: "Open Source Projects", value: 3 },
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center bg-gray-100 p-4 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
+            >
+              <h2 className="text-4xl sm:text-5xl font-bold text-blue-600">
+                <CountUp end={stat.value} duration={3} />+
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-lg">{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-      <Whychoose/>
-      <About />
+      
       <Service />
+      <Whychoose />
+      <About />
       <Stacks />
-      {/* <Works/> */}
       <Contact />
     </>
   );

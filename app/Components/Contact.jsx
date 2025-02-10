@@ -15,24 +15,24 @@ const Contact = () => {
         
         {/* Left Side: Social Section */}
         <div data-aos="fade-right" className="flex flex-col items-center lg:items-start text-center lg:text-left">
-          <h3 className="text-3xl font-bold text-violet-500 mb-4">Let’s Connect</h3>
+          <h3 className="text-3xl font-bold text-blue-500 mb-4">Let’s Connect</h3>
           <p className="text-gray-600 mb-6 max-w-md">
             Reach out through our social channels or leave us a message to start your journey with us.
           </p>
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-violet-500 hover:text-violet-700 transition-colors">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-blue-500 hover:text-violet-700 transition-colors">
               <FaFacebookF size={24} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-violet-500 hover:text-violet-700 transition-colors">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-blue-500 hover:text-violet-700 transition-colors">
               <FaTwitter size={24} />
             </a>
 
-            <a href="https://www.linkedin.com/company/ranzom-softnet/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-violet-500 hover:text-violet-700 transition-colors">
+            <a href="https://www.linkedin.com/company/ranzom-softnet/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-blue-500 hover:text-violet-700 transition-colors">
               <FaLinkedinIn size={24} />
             </a>
-            <a href="https://www.instagram.com/ranzomtech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-violet-500 hover:text-violet-700 transition-colors">
+            <a href="https://www.instagram.com/ranzomtech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-blue-500 hover:text-violet-700 transition-colors">
 
               <FaInstagram size={24} />
             </a>
@@ -55,7 +55,7 @@ const Contact = () => {
                 <label htmlFor="message" className="text-gray-700 font-semibold mb-1">Message</label>
                 <textarea id="message" rows="4" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-violet-500"></textarea>
               </div>
-              <button className="w-full bg-violet-500 text-white py-2 rounded hover:bg-violet-600 transition-colors">
+              <button className="w-full bg-blue-500 text-white py-2 rounded hover:bg-violet-600 transition-colors">
                 Send Message
               </button>
             </div>
