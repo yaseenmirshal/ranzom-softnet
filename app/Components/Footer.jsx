@@ -13,8 +13,8 @@ export default function Footer() {
         <div className="space-y-3">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
 
-      <img src="./images/rtblackk.png" className="h-10 mr-[-10px]" alt="Flowbite Logo"/>
-      <span className="self-center text-2xl md:text-1xl  font-semibold whitespace-nowrap dark:text-white">Ranzomtech</span>
+      <img src="./images/rannav.png" className="h-10 mr-[-10px]" alt="Flowbite Logo"/>
+      {/* <span className="self-center text-2xl md:text-1xl  font-semibold whitespace-nowrap dark:text-white"></span> */}
 
   </Link>
           <p className="text-gray-400 text-sm">
