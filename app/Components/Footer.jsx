@@ -14,7 +14,7 @@ export default function Footer() {
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
 
       <img src="./images/rtblackk.png" className="h-10 mr-[-10px]" alt="Flowbite Logo"/>
-      <span className="self-center text-2xl md:text-1xl  font-semibold whitespace-nowrap dark:text-white">Ranzom Technologies</span>
+      <span className="self-center text-2xl md:text-1xl  font-semibold whitespace-nowrap dark:text-white">Ranzomtech</span>
 
   </Link>
           <p className="text-gray-400 text-sm">

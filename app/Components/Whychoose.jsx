@@ -9,7 +9,7 @@ export default function WhyChooseRanzom() {
   }, []);
 
   return (
-    <div className="bg-white py-20 text-gray-900">
+    <div className="bg-white py-20 text-black">
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <motion.div
@@ -22,11 +22,11 @@ export default function WhyChooseRanzom() {
             Why Choose Us
           </p>
           <h2
-            className="text-3xl md:text-5xl font-bold text-gray-900 mt-2"
+            className="text-3xl md:text-5xl font-bold text-black mt-2"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Why Choose <span className="text-blue-600">Ranzom Technologies</span>?
+            Why Choose <span className="text-orange-600">Ranzom Technologies</span>?
           </h2>
           <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
             We combine cutting-edge technology, strategic thinking, and creative execution to 
@@ -68,8 +68,8 @@ export default function WhyChooseRanzom() {
               data-aos="fade-up"
               data-aos-delay={feature.delay}
             >
-              <div className="text-blue-600">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
+              <div className="text-orange-600">{feature.icon}</div>
+              <h3 className="text-xl font-bold text-black">{feature.title}</h3>
               <p className="text-gray-600 text-sm">{feature.description}</p>
             </motion.div>
           ))}
